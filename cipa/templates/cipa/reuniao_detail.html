@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reunião</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reunião em {{ reuniao.data }}</h1>
+        <p>{{ reuniao.pauta }}</p>
+        <h2>Membros Presentes</h2>
+        <ul class="list-group">
+            {% for membro in reuniao.membros_presentes.all %}
+            <li class="list-group-item">{{ membro.nome }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'reunioes_list' %}" class="btn btn-primary">Voltar</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Membros da CIPA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Membros da CIPA</h1>
+        <ul class="list-group">
+            {% for membro in membros %}
+            <li class="list-group-item">
+                <a href="{% url 'membro_detail' membro.pk %}">{{ membro.nome }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

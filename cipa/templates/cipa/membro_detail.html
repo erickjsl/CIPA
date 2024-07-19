@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ membro.nome }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ membro.nome }}</h1>
+        <p>Cargo: {{ membro.cargo }}</p>
+        <p>Email: {{ membro.email }}</p>
+        <p>Telefone: {{ membro.telefone }}</p>
+        <a href="{% url 'membros_list' %}" class="btn btn-primary">Voltar</a>
+    </div>
+</body>
+</html>

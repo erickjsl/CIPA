@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reuniões da CIPA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reuniões da CIPA</h1>
+        <ul class="list-group">
+            {% for reuniao in reunioes %}
+            <li class="list-group-item">
+                <a href="{% url 'reuniao_detail' reuniao.pk %}">{{ reuniao }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
